@@ -1,2 +1,67 @@
-# SO
-Sistema Operacional
+# Criação de um sistema operacional do zero para fins educacionais
+
+## Fonte   https://www.youtube.com/channel/UCQdZltW7bh1ta-_nCH7LWYw
+## Fonte:  http://wyoos.org/
+
+##  Arquitetura i386
+
+## Sistema Compilado no Debian 9
+
+### 1 - Instalar os seguintes pacotes para compilação
+
+ sudo apt-get  install g++  binutils libc6-dev-i386 xorriso grub-legacy
+
+### 2 - Gerar os arquivos do kernel Inicial
+
+ make loader.o
+ make kernel.o
+ make mykernel.bin (binario do kernel)
+
+
+### 3 - Após gerar os arquivos, vamos gerar a ISO do sistema
+
+  make mykernel.iso (Imagem Pronta C/ Boot Kernel)
+
+
+### 4 - Testando o Sistema no Virtual Box
+
+ Criar máquina no Virtual VirtualBox
+
+ Nome Máquina:  SO
+
+ Tipo: Other
+
+ Versão: Other/Unknown
+
+ Memoria : 64MB
+
+ HD: 1GB
+
+ Escolher o ISO mykernel.iso
+
+
+### 5 - Testando e Executando a Compilação
+
+ make run
+
+
+### 6 -  Arquivos Fontes 
+
+ loader.s -> Arquivo fonte do loader
+ Makefile -> Arquivo com os parametros de compilação
+ linker.ld -> Arquivo com os parametros de linkagem
+ kernel.cpp -> Arquivo fonte do kernel
+ types.h -> Biblioteca Tipos de Dados 
+ gdt.h -> Biblioteca para gdt.cpp
+ gdt.cpp -> Arquivo fonte responsavel pelo gerenciamento de memoria
+ interrupts.h -> Arquivo de Interrupção IRQS
+ interruptstub.s -> Alocação de IRQS 
+ port.h-> Biblioteca de Portas
+ port.cpp -> Carrega portas após as interrupções de IRQ
+ keyboard.h -> Biblioteca para keyboard.cpp
+ keyboard.cpp -> Arquivo carrega o teclado  
+ mouse.h -> Biblioteca de Mouse
+ mouse.cpp -> Arquivo que carrega o mouse
+ driver.h -> Biblioteca Abstração de Drivers
+ driver.cpp -> Driver Teclado e Mouse
+
