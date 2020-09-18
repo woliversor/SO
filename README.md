@@ -47,21 +47,21 @@
 
 ### 6 -  Arquivos Fontes 
 
- loader.s -> Arquivo fonte do loader
- Makefile -> Arquivo com os parametros de compilação
- linker.ld -> Arquivo com os parametros de linkagem
- kernel.cpp -> Arquivo fonte do kernel
- types.h -> Biblioteca Tipos de Dados 
- gdt.h -> Biblioteca para gdt.cpp
- gdt.cpp -> Arquivo fonte responsavel pelo gerenciamento de memoria
- interrupts.h -> Arquivo de Interrupção IRQS
- interruptstub.s -> Alocação de IRQS 
- port.h-> Biblioteca de Portas
- port.cpp -> Carrega portas após as interrupções de IRQ
- keyboard.h -> Biblioteca para keyboard.cpp
- keyboard.cpp -> Arquivo carrega o teclado  
- mouse.h -> Biblioteca de Mouse
- mouse.cpp -> Arquivo que carrega o mouse
- driver.h -> Biblioteca Abstração de Drivers
- driver.cpp -> Driver Teclado e Mouse
+#### loader.s -> Arquivo fonte do loader
+#### Makefile -> Arquivo com os parametros de compilação
+#### linker.ld -> Arquivo com os parametros de linkagem
+#### kernel.cpp -> Arquivo fonte do kernel
+#### types.h -> Biblioteca Tipos de Dados 
+#### gdt.h -> Biblioteca para gdt.cpp
+#### gdt.cpp -> Arquivo fonte responsavel pelo gerenciamento de memoria
+#### interrupts.h -> Arquivo de Interrupção IRQS
+#### interruptstub.s -> Alocação de IRQS 
+#### port.h-> Biblioteca de Portas
+#### port.cpp -> Carrega portas após as interrupções de IRQ
+#### keyboard.h -> Biblioteca para keyboard.cpp
+#### keyboard.cpp -> Arquivo carrega o teclado  
+#### mouse.h -> Biblioteca de Mouse
+#### mouse.cpp -> Arquivo que carrega o mouse
+#### driver.h -> Biblioteca Abstração de Drivers
+#### driver.cpp -> Driver Teclado e Mouse
 
