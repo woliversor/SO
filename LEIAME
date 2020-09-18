@@ -1,15 +1,9 @@
-############################################################################
-#
 #  Sistema Operacional Pardalw V1.0
-#
-#  Arquitetura i386
-#
-#  William Pardal  - 10/01/2019
-#
-############################################################################
-#
-# Sistema Compilado  no Debian 9
-#
+
+##  Arquitetura i386
+
+## Sistema Compilado  no Debian 9
+
 # 1 - Instalar os seguintes pacotes para compilação
 #
 # sudo apt-get  install g++  binutils libc6-dev-i386 xorriso grub-legacy
