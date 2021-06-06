@@ -30,7 +30,7 @@ mykernel.iso: mykernel.bin
 		echo 'timeout=0' > iso/boot/grub/grub.cfg
 		echo 'set default=0' >> iso/boot/grub/grub.cfg
 		echo '' >> iso/boot/grub/grub.cfg
-		echo 'menuentry "Sistema Operacional V1.0"  {' >> iso/boot/grub/grub.cfg
+		echo 'menuentry "Sistema Operacional Pardalw V1.0"  {' >> iso/boot/grub/grub.cfg
 		echo ' multiboot /boot/mykernel.bin' >> iso/boot/grub/grub.cfg
 		echo ' boot' >> iso/boot/grub/grub.cfg
 		echo '}' >> iso/boot/grub/grub.cfg
@@ -40,7 +40,7 @@ mykernel.iso: mykernel.bin
 
 run: mykernel.iso
 	(killall VirtualBox &&  sleep 1) || true
-	VirtualBox --startvm "SO" &
+	VirtualBox --startvm "pardalw" &
 
 install: mykernel.bin
 	sudo cp $< /boot/mykernel.bin

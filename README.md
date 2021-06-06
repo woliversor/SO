@@ -1,67 +1,45 @@
-# Criação de um sistema operacional do zero para fins educacionais
+**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
-## Fonte   https://www.youtube.com/channel/UCQdZltW7bh1ta-_nCH7LWYw
-## Fonte:  http://wyoos.org/
+When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
 
-##  Arquitetura i386
+*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
 
-## Sistema Compilado no Debian 9
+---
 
-### 1 - Instalar os seguintes pacotes para compilação
+## Edit a file
 
- sudo apt-get  install g++  binutils libc6-dev-i386 xorriso grub-legacy
+You’ll start by editing this README file to learn how to edit a file in Bitbucket.
 
-### 2 - Gerar os arquivos do kernel Inicial
+1. Click **Source** on the left side.
+2. Click the README.md link from the list of files.
+3. Click the **Edit** button.
+4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
+5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
+6. Go back to the **Source** page.
 
- make loader.o
- make kernel.o
- make mykernel.bin (binario do kernel)
+---
 
+## Create a file
 
-### 3 - Após gerar os arquivos, vamos gerar a ISO do sistema
+Next, you’ll add a new file to this repository.
 
-  make mykernel.iso (Imagem Pronta C/ Boot Kernel)
+1. Click the **New file** button at the top of the **Source** page.
+2. Give the file a filename of **contributors.txt**.
+3. Enter your name in the empty file space.
+4. Click **Commit** and then **Commit** again in the dialog.
+5. Go back to the **Source** page.
 
+Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
 
-### 4 - Testando o Sistema no Virtual Box
+---
 
- Criar máquina no Virtual VirtualBox
+## Clone a repository
 
- Nome Máquina:  SO
+Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
 
- Tipo: Other
+1. You’ll see the clone button under the **Source** heading. Click that button.
+2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
+3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
+4. Open the directory you just created to see your repository’s files.
 
- Versão: Other/Unknown
-
- Memoria : 64MB
-
- HD: 1GB
-
- Escolher o ISO mykernel.iso
-
-
-### 5 - Testando e Executando a Compilação
-
- make run
-
-
-### 6 -  Arquivos Fontes 
-
-#### loader.s -> Arquivo fonte do loader
-#### Makefile -> Arquivo com os parametros de compilação
-#### linker.ld -> Arquivo com os parametros de linkagem
-#### kernel.cpp -> Arquivo fonte do kernel
-#### types.h -> Biblioteca Tipos de Dados 
-#### gdt.h -> Biblioteca para gdt.cpp
-#### gdt.cpp -> Arquivo fonte responsavel pelo gerenciamento de memoria
-#### interrupts.h -> Arquivo de Interrupção IRQS
-#### interruptstub.s -> Alocação de IRQS 
-#### port.h-> Biblioteca de Portas
-#### port.cpp -> Carrega portas após as interrupções de IRQ
-#### keyboard.h -> Biblioteca para keyboard.cpp
-#### keyboard.cpp -> Arquivo carrega o teclado  
-#### mouse.h -> Biblioteca de Mouse
-#### mouse.cpp -> Arquivo que carrega o mouse
-#### driver.h -> Biblioteca Abstração de Drivers
-#### driver.cpp -> Driver Teclado e Mouse
-
+Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
